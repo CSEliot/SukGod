@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class chanting : MonoBehaviour {
+public class ChantBehavior : MonoBehaviour {
 
-	public GameObject characterRB; 
+	private GameObject characterRB; 
 	public string chantKey;
 	public AudioSource chant;
 	public float chantDuration = 10f;
@@ -14,17 +14,22 @@ public class chanting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isChanting = false;
+		characterRB = this.gameObject;
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		startChanting ();
 	}
 
 
 	public void startChanting(){
-		if (Input.GetButton (chantKey))
+		if (Input.GetButton (chantKey)) {
 			isChanting = true;
+			startTimer ();
+			isChanting = false;
+		
+		}
 	}
 
 	public void startTimer(){
@@ -34,6 +39,9 @@ public class chanting : MonoBehaviour {
 		for (float time = chantDuration; time > 0; time--);  //loop for chant duration
 
 		chant.Stop ();  //Start Chanting
-	
+	}
+
+	public bool chantStatus(){
+		return isChanting;
 	}
 }
