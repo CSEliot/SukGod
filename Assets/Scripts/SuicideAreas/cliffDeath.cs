@@ -21,14 +21,25 @@ public class cliffDeath : MonoBehaviour {
 	void OnTriggerExit(Collider other)
     {
         if (other.tag == "cliffStart")
+        {
             cliffStart = true;
+            StartCoroutine("cliffFallOffCheck");
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "cliffEnd")
+        {
             cliffEnd = true;
-        StartCoroutine("cliffFallOffCheck");
+            StartCoroutine("cliffFallOffCheck");
+            if (cliffStart)
+            {
+                
+                //disable movement
+            }
+        }
+
     }
 
     //Check if character falls off the cliff
