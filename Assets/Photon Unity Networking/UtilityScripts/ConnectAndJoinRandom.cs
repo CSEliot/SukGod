@@ -12,12 +12,19 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     public byte Version = 1;
 
     /// <summary>if we don't want to connect in Start(), we have to "remember" if we called ConnectUsingSettings()</summary>
-    private bool ConnectInUpdate = true;
+    private bool ConnectInUpdate = false;
 
+    public Master MyMaster;
 
     public virtual void Start()
     {
         PhotonNetwork.autoJoinLobby = false;    // we join randomly. always. no need to join a lobby to get the list of rooms.
+    }
+
+    public void BeginConnect()
+    {
+        ConnectInUpdate = true;
+        GetComponent<ShowStatusWhenConnecting>().enabled = true;
     }
 
     public virtual void Update()
@@ -67,7 +74,15 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     public void OnJoinedRoom()
     {
         Debug.Log("OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
-        CreatePlayerObject();
+        if((PhotonNetwork.room.playerCount-1)%5 == 0)
+        {
+            MyMaster.SetTeam(0);
+        }
+        else
+        {
+            MyMaster.SetTeam(1);
+        }
+        //CreatePlayerObject();
     }
 
     #region Photon
