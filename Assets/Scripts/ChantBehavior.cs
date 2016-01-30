@@ -19,26 +19,20 @@ public class ChantBehavior : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		startChanting ();
+		StartCoroutine(startChanting ());
 	}
 
 
-	public void startChanting(){
+	public IEnumerator startChanting(){
 		if (Input.GetButton (chantKey)) {
 			isChanting = true;
-			startTimer ();
+
+			chant.Play (); //Start Chanting
+			yield return new WaitForSeconds (chantDuration);
+			chant.Stop (); //Stops Chanting
+
 			isChanting = false;
-		
 		}
-	}
-
-	public void startTimer(){
-		
-		chant.Play ();  //Start Chanting
-
-		for (float time = chantDuration; time > 0; time--);  //loop for chant duration
-
-		chant.Stop ();  //Start Chanting
 	}
 
 	public bool chantStatus(){
