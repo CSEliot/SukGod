@@ -29,10 +29,11 @@ public class chanting : MonoBehaviour {
 
 	public void startTimer(){
 		
-		chant.Play ();
+		chant.Play ();  //Start Chanting
 
-		for (float time = chantDuration; time > 0; time--);
+		for (float time = chantDuration; time > 0; time--);  //loop for chant duration
 
-		chant.Stop ();
+		chant.Stop ();  //Start Chanting
 	
 	}
+}
