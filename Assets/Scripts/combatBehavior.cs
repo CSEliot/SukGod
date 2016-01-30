@@ -5,7 +5,7 @@ public class combatBehavior : MonoBehaviour {
 
 	public int hitPoints = 3;
 	public string attackKey = "Fire1";
-	public int attackCooldown = 5;
+	public float attackCooldown = 5f;
 	public bool isAttacking;
 	private bool canAttack;
 	private BoxCollider hitbox;
