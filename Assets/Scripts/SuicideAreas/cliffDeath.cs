@@ -39,10 +39,13 @@ public class cliffDeath : MonoBehaviour {
    
         if (cliffStart && cliffEnd)
         {
+            Debug.Log("cliff death");
             //play death animation
             //IF CHANTING POINTS COMPLETE
-            GameStats.addPointsTeam(1, "blue");
-            Vector3 spawnLoc = GameObject.Find("BlueSpawnArea").GetComponent<deathSpawnManager>().getSpawnLoc();
+                GameStats.addPointsTeam(1, "blue");
+                GameStats.cliffLooping = true;
+            //Could also use getSpawnLoc()
+            Vector3 spawnLoc = GameObject.Find("BlueSpawnArea").GetComponent<deathSpawnManager>().getWayPointLoc();
             transform.position = spawnLoc;
         }
         else
