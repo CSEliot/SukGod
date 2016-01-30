@@ -7,7 +7,6 @@ using System.Collections;
 
 //Script Attached to player
 
-
 public class cliffDeath : MonoBehaviour {
 
     public bool cliffStart;
@@ -42,8 +41,8 @@ public class cliffDeath : MonoBehaviour {
             Debug.Log("cliff death");
             //play death animation
             //IF CHANTING POINTS COMPLETE
+              if(GetComponent<ChantBehavior>().chantStatus())
                 GameStats.addPointsTeam(1, "blue");
-                GameStats.cliffLooping = true;
             //Could also use getSpawnLoc()
             Vector3 spawnLoc = GameObject.Find("BlueSpawnArea").GetComponent<deathSpawnManager>().getWayPointLoc();
             transform.position = spawnLoc;
