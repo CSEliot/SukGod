@@ -15,12 +15,16 @@ public class FirstPersonController : MonoBehaviour {
     public float verticalSpeed;
     public float rotLeftRight;
     public float maxVelocityChange;
-    public float mouseSensetivity = 1.0f;
 
     public float jumpHeight;
     public float gravity = 9.81f;
     public float upDownRange;
     public float upDownSpeed;
+    public float RotateSpeed;
+    public float SprintSpeedAddon;
+    private bool canSprint;
+    public float SprintLengthTime;
+    public float ReEnableSprintTime;
     private Vector3 playerPos;
     private Ray	ray;
     private RaycastHit rayHitDown;
@@ -52,7 +56,6 @@ public class FirstPersonController : MonoBehaviour {
     //==================================================================
 
     //PERSONAL CHARACTER MODIFIERS
-    public float runSpeedModifier;
     public float walkSpeedModifier;
     public float jumpHeightModifier;
     private float normalSpeed;
@@ -96,7 +99,7 @@ public class FirstPersonController : MonoBehaviour {
         dropped = true;
 		
         setControlStrings();
-        //animController = gameObject.transform.GetChild (1).GetComponent<Animator> ();
+        //animController = gameObject.transform.GetComponent<Animator> ();
         canCheckForJump = true;
         newRotationAngle = new Vector3();
         startingCameraRotation = transform.GetChild(0).transform.localRotation.eulerAngles;
@@ -110,6 +113,7 @@ public class FirstPersonController : MonoBehaviour {
         maxVelocityChange = moveSpeed;
         canMove = true;
         paused = false;
+        canSprint = true;
     }
 
     void Update ()
@@ -123,8 +127,29 @@ public class FirstPersonController : MonoBehaviour {
         {
             ToggleHelpText();
         }
+        if (Input.GetButtonDown(Dash_str))
+        {
+            if (canSprint)
+            {
+                StartCoroutine(Dash());
+            }
+        }
     }
 
+    IEnumerator Dash()
+    {
+        moveSpeed += SprintSpeedAddon;
+        canSprint = false;
+        yield return new WaitForSeconds(SprintLengthTime);
+        moveSpeed -= SprintSpeedAddon;
+        StartCoroutine(ReallowSprinting());
+    }
+
+    IEnumerator ReallowSprinting()
+    {
+        yield return new WaitForSeconds(ReEnableSprintTime);
+        canSprint = true; 
+    }
 
     void FixedUpdate () {
 
@@ -151,10 +176,10 @@ public class FirstPersonController : MonoBehaviour {
         if (!paused) {		
             //player rotation
             //left and right
-            rotLeftRight = Input.GetAxis (Haim_str) * mouseSensetivity;
+            rotLeftRight = Input.GetAxis (Haim_str) * RotateSpeed;
             transform.Rotate (0, rotLeftRight, 0);
             //up and down (with camera)
-            rotUpDown -= Input.GetAxis (Vaim_str) * mouseSensetivity  * upDownSpeed;
+            rotUpDown -= Input.GetAxis (Vaim_str) * upDownSpeed;
             rotUpDown = Mathf.Clamp (rotUpDown, -upDownRange, upDownRange);
             newRotationAngle.x = rotUpDown;
             newRotationAngle.y = startingCameraRotation.y;
@@ -174,8 +199,6 @@ public class FirstPersonController : MonoBehaviour {
             if (canMove) {
                 Vector3 targetVelocity;
                 targetVelocity = new Vector3 (Input.GetAxis (Strf_str), 0, Input.GetAxis (FWmv_str));
-                Debug.Log("Pushing:  " + Str)
-                Debug.Log("Push: " + Input.GetAxis(Strf_str) + " " + Input.GetAxis(FWmv_str));
                 targetVelocity = transform.TransformDirection (targetVelocity);
                 targetVelocity *= moveSpeed;
                 // Apply a force that attempts to reach our target velocity
@@ -325,5 +348,20 @@ public class FirstPersonController : MonoBehaviour {
     public void UnpauseCharacter()
     {
         paused = false;
+    }
+
+    public void ToggleMovement()
+    {
+        canMove = !canMove;
+    }
+
+    public bool GetIsDead()
+    {
+        return isDead;
+    }
+    
+    public void SetIsDead(bool DeadState)
+    {
+        isDead = DeadState;
     }
 }
