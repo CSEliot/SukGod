@@ -1,0 +1,34 @@
+﻿# System files
+Thumbs.db
+Thumbs.db.meta
+**.DS_Store
+**.directory
+
+#Build files
+**.apk
+
+# Visual Studio files
+**.cachefile
+**.csproj
+**.pidb
+**.sln
+**.suo
+**.unityproj
+**.user
+**.userprefs
+**.v11
+**.v12
+
+# Folders to keep
+!Assets/InControl/Source/Debug
+
+# Folder to exclude
+*[Bb]in
+*[Dd]ebug*/
+*[Rr]elease*/
+*Build/
+*Builds/
+*ipch/
+*Library/
+*obj/
+*Temp/
