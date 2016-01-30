@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/**
+ * @author Chris Ridgely
+ * @updated 12:09 Jan 30
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class ChantBehavior : MonoBehaviour {
@@ -24,7 +29,7 @@ public class ChantBehavior : MonoBehaviour {
 
 
 	public IEnumerator startChanting(){
-		if (Input.GetButton (chantKey)) {
+		if (Input.GetButton (chantKey) && isChanting==false) {
 			isChanting = true;
 
 			chant.Play (); //Start Chanting
