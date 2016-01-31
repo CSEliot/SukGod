@@ -36,7 +36,7 @@ public class FirstPersonController : MonoBehaviour {
     public float moveSpeed;    
     public float totalJumpsAllowed;
     public float totalJumpsMade;
-    private float floorInclineThreshold = 0.3f;
+    public float FloorInclineThreshold;
 
 
     public bool canCheckForJump;
@@ -125,13 +125,31 @@ public class FirstPersonController : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
             transform.GetChild(0).gameObject.SetActive(true);
         }
+        Debug.Log("View ID: " + m_PhotonView.viewID);
+        if(((m_PhotonView.viewID - 1001) / 1000)%5 == 0)
+        {
+            gameObject.tag = "Red Player";
+        }
+        else
+        {
+            gameObject.tag = "Blue Player";
+        }
     }
 
     void Update ()
     {
+
+
+
+
+        if (Input.GetKeyDown("p"))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
         if (Input.GetAxis(Fire_str) == 1)
         {
-            Debug.Log(GetComponent<Rigidbody>().velocity);
+            //Debug.Log(GetComponent<Rigidbody>().velocity);
         }
 
         if (Input.GetButtonDown(Help_str))
@@ -164,23 +182,35 @@ public class FirstPersonController : MonoBehaviour {
 
     void FixedUpdate () {
 
+
+        if ((Mathf.Abs(GetComponent<Rigidbody>().velocity.x) + Mathf.Abs(GetComponent<Rigidbody>().velocity.z)) > 2f)
+        {
+            GetComponent<AnimationManager>().isMoving(true);
+        }
+        else
+        {
+            GetComponent<AnimationManager>().isMoving(false);
+        }
+
+
+
         if (!m_PhotonView.isMine)
             return;
 
         rayOrigin = new Ray(transform.position, transform.up*-1);
 
-        //if you are able to reach something, anything important or not
-        if (Physics.Raycast(rayOrigin, out hitInfo)) {
-            //if (Time.time % 2f > 1.8f) { Debug.Log("Below me is: " + hitInfo.normal.y); }
-            if (hitInfo.normal.y <= 0.4f)
-            {
-                canMove = false;
-            }
-            else
-            {
-                canMove = true;
-            }
-        }
+        ////if you are able to reach something, anything important or not
+        //if (Physics.Raycast(rayOrigin, out hitInfo)) {
+        //    //if (Time.time % 2f > 1.8f) { Debug.Log("Below me is: " + hitInfo.normal.y); }
+        //    if (hitInfo.normal.y <= 0.4f)
+        //    {
+        //        canMove = false;
+        //    }
+        //    else
+        //    {
+        //        canMove = true;
+        //    }
+        //}
 
         if (!paused) {		
             //player rotation
@@ -199,6 +229,9 @@ public class FirstPersonController : MonoBehaviour {
             if (totalJumpsMade < totalJumpsAllowed && Input.GetButtonDown (Jump_str)) {
                 totalJumpsMade += 1;
                 isGrounded = false;
+
+                GetComponent<AnimationManager>().isJumping(true);
+                GetComponent<AnimationManager>().isGrounded(false);
                 canCheckForJump = false;
 
                 GetComponent<Rigidbody>().velocity = new Vector3 (GetComponent<Rigidbody>().velocity.x, CalculateJumpVerticalSpeed (), GetComponent<Rigidbody>().velocity.z);
@@ -308,16 +341,21 @@ public class FirstPersonController : MonoBehaviour {
     {
         //Manager.say("CAN CJECK JUMP", "eliot");
         canCheckForJump = true;
+        GetComponent<AnimationManager>().isJumping(false);
     }
 
     void OnCollisionStay(Collision floor){
         Vector3 tempVect;
+
+        GetComponent<AnimationManager>().isGrounded(true);
+
         // we want to prevent isGrounded from being true and totalJumpsMade = 0 until 2 seconds later
-        if(isGrounded == false && canCheckForJump){
+        if (isGrounded == false && canCheckForJump){
             for(int i = 0; i < floor.contacts.Length; i++){
                 tempVect = floor.contacts[i].normal;
-                if( tempVect.y > floorInclineThreshold){
-                    isGrounded = true;
+                if( tempVect.y > FloorInclineThreshold){
+                 
+                    
                     totalJumpsMade = 0;
                     return;
                     //Manager.say("Collision normal is: " + tempVect);
@@ -336,6 +374,7 @@ public class FirstPersonController : MonoBehaviour {
 
     void OnTriggerExit(Collider colObj)
     {
+
     }
 
     IEnumerator DelayCarrying()
@@ -367,10 +406,13 @@ public class FirstPersonController : MonoBehaviour {
     public bool GetIsDead()
     {
         return isDead;
+        GetComponent<AnimationManager>().isDead(true);
     }
-    
-    public void SetIsDead(bool DeadState)
+
+    [PunRPC]
+    public void SetTag(string tagName)
     {
-        isDead = DeadState;
+        gameObject.tag = tagName;
     }
+
 }

@@ -28,15 +28,21 @@ public class combatBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if (Input.GetButtonDown (attackKey) && canAttack) {
-			hitbox.enabled = true;
-			StartCoroutine(cooldown ());
-		}
+		hitbox.enabled = false;
+        if (Input.GetButtonDown(attackKey) && canAttack)
+        {
+            hitbox.enabled = true;
+            GetComponent<AnimationManager>().isAttacking(true);
+            StartCoroutine(cooldown());
+        }
+        else
+        {
+            GetComponent<AnimationManager>().isAttacking(false);
+        }
 	}
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log ("Trigger Entered");
+		Debug.Log ("Combat Trigger Entered: " + other.name);
 		if(this.gameObject.tag == "Red Player" && other.gameObject.tag == "Blue Player")
 			other.SendMessageUpwards ("loseHealth");
 	}
@@ -46,8 +52,8 @@ public class combatBehavior : MonoBehaviour {
 			hitPoints--;
 			Debug.Log (hitPoints);
 		} else {
-			Destroy (this.gameObject); //Changed in the future to incorporate death animation
-	
+            GetComponent<AnimationManager>().isDead(true);
+            //Destroy (this.gameObject); //Changed in the future to incorporate death animation
 		}
 	}
 
@@ -56,6 +62,5 @@ public class combatBehavior : MonoBehaviour {
 		yield return new WaitForSeconds (attackCooldown);
 		canAttack = true;
 		Debug.Log ("Cooldown Ended");
-
 	}
 }

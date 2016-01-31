@@ -1,11 +1,24 @@
 fileFormatVersion: 2
-guid: 0268f98d7c649564a818b0768fc68d4b
-labels:
-- ExitGames
-- PUN
-- Photon
-- Networking
-MonoAssemblyImporter:
+guid: 5bc1fd0f3abea17468ace560bbf344a6
+timeCreated: 1454204951
+licenseType: Pro
+PluginImporter:
   serializedVersion: 1
   iconMap: {}
   executionOrder: {}
+  isPreloaded: 0
+  platformData:
+    Any:
+      enabled: 0
+      settings: {}
+    Editor:
+      enabled: 1
+      settings:
+        DefaultValueInitialized: true
+    WindowsStoreApps:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

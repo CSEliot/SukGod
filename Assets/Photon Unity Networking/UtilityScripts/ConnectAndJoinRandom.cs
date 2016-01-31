@@ -90,13 +90,16 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     public void CreatePlayerObject()
     {
         Vector3 myPosition;
+        string playerTag = "";
         string spawnSide = ""; 
         if(MyMaster.GetTeam() == 0)
         {
             spawnSide = "SpawnsRed";
+            playerTag = "Red Player";
         }else if (MyMaster.GetTeam() == 1)
         {
             spawnSide = "SpawnsBlue";
+            playerTag = "Blue Player";
         }
         else
         {
@@ -106,8 +109,22 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
         int randomSpawnNum = Random.Range(0, totalSpawns - 1);
         myPosition = GameObject.FindGameObjectWithTag(spawnSide).transform.GetChild(randomSpawnNum).transform.position;
 
-        GameObject newPlayerObject = PhotonNetwork.Instantiate("Player-Net4", myPosition, Quaternion.identity, 0);
-        m_AnimatorView = newPlayerObject.GetComponent<PhotonAnimatorView>();
+        //Choose between blue and red player here
+        if (playerTag == "Red Player")
+        {
+            GameObject newPlayerObject = PhotonNetwork.Instantiate("Player-Net44Red", myPosition, Quaternion.identity, 0);
+            m_AnimatorView = newPlayerObject.GetComponent<PhotonAnimatorView>();
+        }
+        else
+        {
+            GameObject newPlayerObject = PhotonNetwork.Instantiate("Player-Net44Blue", myPosition, Quaternion.identity, 0);
+            m_AnimatorView = newPlayerObject.GetComponent<PhotonAnimatorView>();
+        }
+
+        
+        
+        
+        
     }
 
     #endregion
