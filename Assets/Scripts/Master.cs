@@ -10,6 +10,8 @@ public class Master : MonoBehaviour {
     public Text Countdown;
     private PhotonView m_PhotonView;
 
+    private bool countdownStarted;
+
     void Awake ()
     {
         myTeam = -1;
@@ -19,11 +21,18 @@ public class Master : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         m_PhotonView = GetComponent<PhotonView>();
+        countdownStarted = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (Input.GetKeyDown(";"))
+        {
+            PhotonNetwork.Disconnect();
+            SceneManager.UnloadScene(SceneManager.GetActiveScene().name);
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 	}
 
     public void OnJoinedRoom()
@@ -32,6 +41,19 @@ public class Master : MonoBehaviour {
 
     void OnPhotonPlayerConnected(PhotonPlayer player)
     {
+        
+    }
+
+    void OnPhotonPlayerDisconnected(PhotonPlayer player)
+    {
+        totalReady--;
+        if (player.isMasterClient || countdownStarted)
+        {
+            PhotonNetwork.Disconnect();
+            SceneManager.UnloadScene(SceneManager.GetActiveScene().name);
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     /// <summary>
@@ -70,17 +92,29 @@ public class Master : MonoBehaviour {
     public void ReadyCountAdd()
     {
         totalReady++;
-        if(totalReady > 3)
+        if(totalReady > 3 && !countdownStarted)
         {
-            Countdown.gameObject.SetActive(true);
-            m_PhotonView.RPC("DoCountdown", PhotonTargets.All);
+            countdownStarted = true;
+            StartCoroutine(BeginCountdown());
         }
     }
 
     [PunRPC]
-    void DoCountdown()
+    void SetCountdown(int count)
     {
-            StartCoroutine(BeginCountdown());
+        Countdown.gameObject.SetActive(true);
+        Countdown.text = "" + count;
+    }
+
+    [PunRPC]
+    void EndCountdown()
+    {
+        foreach (GameObject g in GameObject.FindGameObjectsWithTag("Wall"))
+        {
+            g.SetActive(false);
+        }
+        Countdown.gameObject.SetActive(false);
+        PhotonNetwork.room.open = false;
     }
 
     IEnumerator BeginCountdown()
@@ -88,16 +122,12 @@ public class Master : MonoBehaviour {
         int count = 30;
         while(count >= 0)
         {
-            Countdown.text = "" + count;
+            m_PhotonView.RPC("SetCountdown", PhotonTargets.All, count);
             yield return new WaitForSeconds(1f);
             count--;
         }
-        foreach(GameObject g in GameObject.FindGameObjectsWithTag("Wall"))
-        {
-            g.SetActive(false);
-        }
-        Countdown.gameObject.SetActive(false);
-        PhotonNetwork.room.open = false;
+
+        m_PhotonView.RPC("EndCountdown", PhotonTargets.All);
     }
 
     public int GetTeam()

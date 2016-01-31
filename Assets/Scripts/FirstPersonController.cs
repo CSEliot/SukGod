@@ -125,13 +125,27 @@ public class FirstPersonController : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
             transform.GetChild(0).gameObject.SetActive(true);
         }
+        Debug.Log("View ID: " + m_PhotonView.viewID);
+        if(((m_PhotonView.viewID - 1001) / 1000)%5 == 0)
+        {
+            gameObject.tag = "Red Player";
+        }
+        else
+        {
+            gameObject.tag = "Blue Player";
+        }
     }
 
     void Update ()
     {
+        if (Input.GetKeyDown("p"))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
         if (Input.GetAxis(Fire_str) == 1)
         {
-            Debug.Log(GetComponent<Rigidbody>().velocity);
+            //Debug.Log(GetComponent<Rigidbody>().velocity);
         }
 
         if (Input.GetButtonDown(Help_str))
@@ -368,9 +382,11 @@ public class FirstPersonController : MonoBehaviour {
     {
         return isDead;
     }
-    
-    public void SetIsDead(bool DeadState)
+
+    [PunRPC]
+    public void SetTag(string tagName)
     {
-        isDead = DeadState;
+        gameObject.tag = tagName;
     }
+
 }
