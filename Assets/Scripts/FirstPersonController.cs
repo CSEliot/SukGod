@@ -211,7 +211,11 @@ public class FirstPersonController : MonoBehaviour {
         //        canMove = true;
         //    }
         //}
-
+        GetComponent<Rigidbody>().AddForce(new Vector3(0, -gravity * GetComponent<Rigidbody>().mass, 0));
+        if (paused)
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(0, -gravity * GetComponent<Rigidbody>().mass, 0));
+        }
         if (!paused) {		
             //player rotation
             //left and right
@@ -257,7 +261,7 @@ public class FirstPersonController : MonoBehaviour {
                 //Manager.say("Jumping action go. Jumps Made: " + totalJumpsMade + " Jumps Allowed: " + totalJumpsAllowed, "eliot");
             }
 
-            GetComponent<Rigidbody>().AddForce (new Vector3 (0, -gravity * GetComponent<Rigidbody>().mass, 0));
+            
             // We apply gravity manually for more tuning control
         }
     }  

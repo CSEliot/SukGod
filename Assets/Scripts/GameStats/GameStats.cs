@@ -11,7 +11,7 @@ public static class GameStats
     public static int redTeamPoints = 0;
 
     //Time Before Respawn after character dies
-    public static float TimeBeforeRespawn = 3.0f;
+    public static float TimeBeforeRespawn = 5.0f;
 
     ///[PunRPC]
     public static void addPointsTeam(int value, string teamColor)
