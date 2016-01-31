@@ -118,7 +118,7 @@ public class FirstPersonController : MonoBehaviour {
 
         m_PhotonView = GetComponent<PhotonView>();
         m_PhotonTransform = GetComponent<PhotonTransformView>();
-        if (m_PhotonView.isMine)
+        if (true) //m_PhotonView.isMine
         {
             startingCameraRotation = transform.GetChild(0).transform.localRotation.eulerAngles;
             Cursor.visible = false;
@@ -178,8 +178,8 @@ public class FirstPersonController : MonoBehaviour {
 
     void FixedUpdate () {
 
-        if (!m_PhotonView.isMine)
-            return;
+        //if (!m_PhotonView.isMine)
+         //   return;
 
         rayOrigin = new Ray(transform.position, transform.up*-1);
 
@@ -350,6 +350,7 @@ public class FirstPersonController : MonoBehaviour {
 
     void OnTriggerExit(Collider colObj)
     {
+
     }
 
     IEnumerator DelayCarrying()
