@@ -30,6 +30,7 @@ public class ChantBehavior : MonoBehaviour {
         if (Input.GetButton(chantKey) && isChanting == false && !GetComponent<fireDeath>().isOnFire)
         {
             isChanting = true;
+			gameObject.GetComponent<CloneBehavior> ().recordLocation ();
             Debug.Log("start chanting"); //Start Chanting
             StartCoroutine(startChanting ());
         }
