@@ -23,11 +23,12 @@ public class combatBehavior : MonoBehaviour {
 		isAttacking = false;
 		canAttack = true;
 		hitbox = gameObject.GetComponent<BoxCollider> ();
+		hitbox.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		hitbox.enabled = false;
+		
 		if (Input.GetButtonDown (attackKey) && canAttack) {
 			hitbox.enabled = true;
 			StartCoroutine(cooldown ());

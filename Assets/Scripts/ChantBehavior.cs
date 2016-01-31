@@ -24,20 +24,20 @@ public class ChantBehavior : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		StartCoroutine(startChanting ());
+		if (Input.GetButton (chantKey) && isChanting==false)
+			StartCoroutine(startChanting ());
 	}
 
 
 	public IEnumerator startChanting(){
-		if (Input.GetButton (chantKey) && isChanting==false) {
-			isChanting = true;
+		isChanting = true;
+		gameObject.GetComponent<CloneBehavior> ().recordLocation();
+		chant.Play (); //Start Chanting
+		yield return new WaitForSeconds (chantDuration);
+		chant.Stop (); //Stops Chanting
 
-			chant.Play (); //Start Chanting
-			yield return new WaitForSeconds (chantDuration);
-			chant.Stop (); //Stops Chanting
+		isChanting = false;
 
-			isChanting = false;
-		}
 	}
 
 	public bool chantStatus(){
