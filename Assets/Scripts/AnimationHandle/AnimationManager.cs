@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+//attached to the blue char obj
 public class AnimationManager : MonoBehaviour {
 
     public Animator manager;

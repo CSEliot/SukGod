@@ -4,7 +4,6 @@ using System.Collections;
 //NOTES:
 //asumes ChantBeahvior script and this script are
 //part of the same game object
-
 //attached to the blue char obj
 public class fireDeath : MonoBehaviour {
 

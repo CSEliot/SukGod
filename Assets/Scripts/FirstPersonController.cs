@@ -16,6 +16,10 @@ public class FirstPersonController : MonoBehaviour {
     public float rotLeftRight;
     public float maxVelocityChange;
 
+
+    PhotonView m_PhotonView;
+    private PhotonTransformView m_PhotonTransform;
+
     public float jumpHeight;
     public float gravity = 9.81f;
     public float upDownRange;
@@ -102,18 +106,25 @@ public class FirstPersonController : MonoBehaviour {
         //animController = gameObject.transform.GetComponent<Animator> ();
         canCheckForJump = true;
         newRotationAngle = new Vector3();
-        startingCameraRotation = transform.GetChild(0).transform.localRotation.eulerAngles;
         totalJumpsMade = 0;
         rotLeftRight = 0.0f;
         isDead = false;
         isCarrying = false;
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         maxVelocityChange = moveSpeed;
         canMove = true;
         paused = false;
         canSprint = true;
+
+        m_PhotonView = GetComponent<PhotonView>();
+        m_PhotonTransform = GetComponent<PhotonTransformView>();
+        if (m_PhotonView.isMine)
+        {
+            startingCameraRotation = transform.GetChild(0).transform.localRotation.eulerAngles;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     void Update ()
@@ -153,10 +164,8 @@ public class FirstPersonController : MonoBehaviour {
 
     void FixedUpdate () {
 
-        if (Input.GetKeyDown("r"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        if (!m_PhotonView.isMine)
+            return;
 
         rayOrigin = new Ray(transform.position, transform.up*-1);
 

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class movementModifier : MonoBehaviour {
 
+    //attached to the blue char obj
+
     public GameObject player;
     public float chantDuration;
 
