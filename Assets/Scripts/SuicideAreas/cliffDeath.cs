@@ -7,59 +7,78 @@ using System.Collections;
 
 //Script Attached to player
 
-public class cliffDeath : MonoBehaviour {
+public class cliffDeath : MonoBehaviour
+{
 
     private bool cliffStart;
     private bool cliffEnd;
+    private Transform deathPos;
 
+    private bool doneDead;
 
     void Start()
     {
+        doneDead = false;
+        deathPos = GameObject.Find("Cliff Death").transform;
         cliffEnd = false;
         cliffStart = false;
     }
-    
-	void OnTriggerExit(Collider other)
+
+    void OnTriggerExit(Collider other)
     {
 
         if (other.tag == "cliffStart")
         {
             cliffStart = true;
-            StartCoroutine("cliffFallOffCheck");
-            cliffFallOffCheck();
+            //
         }
+    }
+
+    void Update()
+    {
+        if (cliffEnd)
+        {
+            if (deathPos.position.y > transform.position.y)
+            {
+                if (!doneDead)
+                    DoDead();
+            }
+            cliffEnd = false;
+        }
+    }
+
+
+    private void DoDead()
+    {
+        doneDead = true;
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<FirstPersonController>().PauseCharacter();
+        GetComponent<movementModifier>().isCurrentlyDead = true;
+        GetComponent<ChantBehavior>().CliffDeath();
+        GetComponent<AnimationManager>().isJumping(false);
+        GetComponent<AnimationManager>().isGrounded(true);
+        GetComponent<AnimationManager>().isDead(true);
+        StartCoroutine(cliffFallOffCheck());
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "cliffEnd")
+        if (other.tag == "cliffStart")
         {
-            Debug.Log("Entering clifend: " + other.name + gameObject.name);
+            GetComponent<AnimationManager>().isJumping(true);
+            GetComponent<AnimationManager>().isGrounded(false);
+            GetComponent<FirstPersonController>().PauseCharacter();
+            Debug.Log("Entering clif " + other.name + gameObject.name);
             cliffEnd = true;
-            StartCoroutine("cliffFallOffCheck");
-            if (cliffStart)
-            {
-                GetComponent <Rigidbody>().isKinematic = true;
-                GetComponent<FirstPersonController>().PauseCharacter();
-                GetComponent<movementModifier>().isCurrentlyDead = true;
-                GetComponent<ChantBehavior>().CliffDeath();
-                GetComponent<AnimationManager>().isDead(true);           
-             }
         }
-
     }
 
     //Check if character falls off the cliff
     IEnumerator cliffFallOffCheck()
     {
         yield return new WaitForSeconds(GameStats.TimeBeforeRespawn);
-        if (cliffStart && cliffEnd)
-        {
-            GetComponent<FirstPersonController>().UnpauseCharacter();
-            GetComponent<movementModifier>().resetEverything();
-        }
-        else
-         cliffEnd = false;
-         cliffStart = false;
-        }
+        GetComponent<FirstPersonController>().UnpauseCharacter();
+        GetComponent<movementModifier>().resetEverything();
     }
+}
+

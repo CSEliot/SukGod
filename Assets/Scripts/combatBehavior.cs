@@ -10,11 +10,12 @@ public class combatBehavior : MonoBehaviour {
 	private bool canAttack;
 	private BoxCollider hitbox;
 
-
+    private PhotonView m_p;
 
 
 	// Use this for initialization
 	void Start () {
+        m_p = GetComponent<PhotonView>();
 		isAttacking = false;
 		canAttack = true;
 		hitbox = gameObject.GetComponent<BoxCollider> ();
@@ -23,7 +24,7 @@ public class combatBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		hitbox.enabled = false;
-        if (Input.GetButtonDown(attackKey) && canAttack)
+        if (Input.GetButtonDown(attackKey) && canAttack && gameObject.tag == "Red Player" && m_p.isMine)
         {
             hitbox.enabled = true;
             GetComponent<AnimationManager>().isAttacking(true);

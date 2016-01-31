@@ -10,14 +10,20 @@ public class ChantBehavior : MonoBehaviour {
 
 	public string chantKey;
 	public AudioSource chant;
-	public float chantDuration = 10.0f;
+	public float chantDuration = 5.0f;
 	private bool isChanting;
-    private bool hasChanted;
+    private bool chantStop;
+    private bool isOnFire;
+    private PhotonView m_p;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
+        m_p = GetComponent<PhotonView>();
+        isOnFire = false;
+        chantStop = true;
         isChanting = false;
-        hasChanted = false;
         //chant.Stop();
 	}
 
@@ -27,7 +33,7 @@ public class ChantBehavior : MonoBehaviour {
         //Debug.Log("BLUE POINTS: " + GameStats.blueTeamPoints);
         //if character is not jumping
         //if not current chanting and not currently in a fire
-        if (Input.GetButton(chantKey) && isChanting == false && !GetComponent<fireDeath>().isOnFire)
+        if (gameObject.tag == "Blue Player" && Input.GetButtonDown(chantKey) && isChanting == false && !isOnFire && m_p.isMine)
         {
             isChanting = true;
             Debug.Log("start chanting"); //Start Chanting
@@ -49,58 +55,95 @@ public class ChantBehavior : MonoBehaviour {
         //    GameStats.addPointsTeam(-1, "blue");
         //    GetComponent<movementModifier>().isCurrentlyDead = false;
         //}
-
-        //if player has chanted in the past then DOES NOT die, player loses points
-        if (hasChanted && !GetComponent<movementModifier>().isCurrentlyDead)
-        {
-            GameStats.addPointsTeam(-1, "blue");
-            hasChanted = false;
-        }
-
 	}
+
+    IEnumerator EndChantIn()
+    {
+        yield return new WaitForSeconds(chantDuration);
+        if (isChanting)
+        {
+            chantStop = true;
+            GameStats.addPointsTeam(-1, "blue");
+        }
+    }
 
     public IEnumerator startChanting()
     {
-        yield return new WaitForSeconds(chantDuration);
-        Debug.Log("stop chanting"); //Stops Chanting
-        bool suicidedDuringChant = false;
-        if (GetComponent<movementModifier>().isCurrentlyDead)
+        StartCoroutine(EndChantIn());
+        while (!chantStop)
         {
-            suicidedDuringChant = true;
+            //Debug.Log("stop chanting"); //Stops Chanting
+            yield return null;
         }
+        chantStop = false;
         isChanting = false;
-        if(!suicidedDuringChant)
-            hasChanted = true;
     }
 
     public void CliffDeath()
     {
         Debug.Log("Cliff Death");
-        if (GetComponent<movementModifier>().isCurrentlyDead)
+        if (isChanting)
         {
-            if (isChanting)
-            {
-                GameStats.addPointsTeam(1, "blue");
-            }
-            else
-            {
-                GameStats.addPointsTeam(-1, "blue");
-            }
-            isChanting = false;
+            GameStats.addPointsTeam(1, "blue");
         }
+        else
+        {
+            GameStats.addPointsTeam(-1, "blue");
+        }
+        chantStop = true;
+    }
+
+    public void FireDeath(float firetime)
+    {
+        isOnFire = true;
+        Debug.Log("Fire Death");
+        if (isChanting)
+        {
+            StartCoroutine(winPointsIn(firetime));
+        }
+        else
+        {
+            StartCoroutine(losePointsIn(firetime));
+        }
+        chantStop = true;
+    }
+
+    IEnumerator losePointsIn(float firetime)
+    {
+        yield return new WaitForSeconds(firetime);
+        GameStats.addPointsTeam(-1, "blue");
+        isOnFire = false;
+    }
+
+    IEnumerator winPointsIn(float firetime)
+    {
+        yield return new WaitForSeconds(firetime);
+        GameStats.addPointsTeam(1, "blue");
+        isOnFire = false;
+    }
+
+    public void Murdered()
+    {
+        if (isChanting)
+        {
+            Debug.Log("Murdered while Chanting!");
+            GameStats.addPointsTeam(-2, "blue");
+            chantStop = true;
+        }
+        else
+        {
+            Debug.Log("Murdered!");
+            GameStats.addPointsTeam(-1, "blue");
+        }
+        isOnFire = false;
     }
 
 	public bool chantStatus(){
 		return isChanting;
 	}
 
-    public bool GetHasChanted()
+    public void StopChanting()
     {
-        return hasChanted;
-    }
-
-    public void SetHasChanted(bool myChant)
-    {
-        hasChanted = myChant;
+        chantStop = true;
     }
 }
