@@ -37,6 +37,7 @@ public class cliffDeath : MonoBehaviour {
             if (cliffStart)
             {
                 GetComponent<FirstPersonController>().enabled = false;
+                GetComponent <FirstPersonController>().PauseCharacter();
                 GetComponent<movementModifier>().isCurrentlyDead = true;
                 GetComponent<AnimationManager>().isDead(true);           
              }
@@ -50,11 +51,7 @@ public class cliffDeath : MonoBehaviour {
         yield return new WaitForSeconds(GameStats.TimeBeforeRespawn);
         if (cliffStart && cliffEnd)
         {
-            Debug.Log("cliff death");
-            if (GetComponent<ChantBehavior>().chantStatus())
-            {
-                GameStats.addPointsTeam(1, "blue");
-            }
+            GetComponent<FirstPersonController>().UnpauseCharacter();
             GetComponent<movementModifier>().resetEverything();
         }
         else

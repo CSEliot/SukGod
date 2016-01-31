@@ -118,7 +118,7 @@ public class FirstPersonController : MonoBehaviour {
 
         m_PhotonView = GetComponent<PhotonView>();
         m_PhotonTransform = GetComponent<PhotonTransformView>();
-        if (m_PhotonView.isMine)
+        if (true) //m_PhotonView.isMine
         {
             startingCameraRotation = transform.GetChild(0).transform.localRotation.eulerAngles;
             Cursor.visible = false;
@@ -131,7 +131,7 @@ public class FirstPersonController : MonoBehaviour {
     {
         if (Input.GetAxis(Fire_str) == 1)
         {
-            Debug.Log(GetComponent<Rigidbody>().velocity);
+            //Debug.Log(GetComponent<Rigidbody>().velocity);
         }
 
         if (Input.GetButtonDown(Help_str))
@@ -164,8 +164,8 @@ public class FirstPersonController : MonoBehaviour {
 
     void FixedUpdate () {
 
-        if (!m_PhotonView.isMine)
-            return;
+        //if (!m_PhotonView.isMine)
+         //   return;
 
         rayOrigin = new Ray(transform.position, transform.up*-1);
 

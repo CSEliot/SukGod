@@ -15,8 +15,8 @@ public static class GameStats
     public static void addPointsTeam(int value, string teamColor)
     {
         if (teamColor == "red")
-            redTeamPoints += value;
+            redTeamPoints = redTeamPoints + value;
         else if (teamColor == "blue")
-            blueTeamPoints += value;
+            blueTeamPoints = blueTeamPoints + value;
     }
 }

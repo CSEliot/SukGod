@@ -9,44 +9,33 @@ public class movementModifier : MonoBehaviour {
     public float chantDuration;
 
     //Assuming characters can only chant once
-    public bool haveChanted;
     public bool isCurrentlyDead;
 
     void Start()
     {
         isCurrentlyDead = false;
-        haveChanted = false;
-        chantDuration = 1.0f;
-        Debug.Log("start here");
+      //  haveChanted = false;
+        chantDuration = 2.0f;
         player = GameObject.Find("BluePlayer4");
     }
 
     //Halt movement during chanting
 	void Update ()
     {
-        
-
-        if(player.GetComponent<ChantBehavior>().chantStatus() && !haveChanted && !isCurrentlyDead)
+        if (player.GetComponent<ChantBehavior>().chantStatus() /*&& !haveChanted*/ && !isCurrentlyDead)
         {
-            Debug.Log("chanting");
-            haveChanted = true;
-            Chanting();
+            StartCoroutine("stopMoving", chantDuration);
         }
 	}
 
-    void Chanting()
-    {
-        StartCoroutine("stopMoving", chantDuration);  
-    }
-
     public IEnumerator stopMoving(float duration)
     {
-        player.GetComponent<Rigidbody>().Sleep();
-        player.GetComponent<FirstPersonController>().enabled = false;
+        Debug.Log("Stop Moving");
+        GetComponent<FirstPersonController>().PauseCharacter();
+        //transform.position.y = 0.0f;
+        //transform.position.x = 0.0f;
         yield return new WaitForSeconds(duration);
-        //renable movement after chanting
-        player.GetComponent<Rigidbody>().WakeUp();
-        player.GetComponent<FirstPersonController>().enabled = true;
+        GetComponent<FirstPersonController>().UnpauseCharacter();
 
     }
 
@@ -55,12 +44,11 @@ public class movementModifier : MonoBehaviour {
         Vector3 pos = GameObject.Find("BlueSpawnArea").GetComponent<deathSpawnManager>().getWayPointLoc();
         transform.position = pos;
         GetComponent<FirstPersonController>().enabled = true;
-        GetComponent<Rigidbody>().WakeUp();
         GetComponent<fireDeath>().isOnFire = false;
         isCurrentlyDead = false;
-        haveChanted = false;
         GetComponent<AnimationManager>().isDead(false);
         GetComponent<AnimationManager>().isReset(true);
+        GetComponent<ChantBehavior>().hasChanted = false;
         StartCoroutine("waitToClearReset");
     }
 
@@ -68,8 +56,5 @@ public class movementModifier : MonoBehaviour {
     {
         yield return new WaitForSeconds(2.0F);
         GetComponent<AnimationManager>().isReset(false);
-
     }
-
-
 }

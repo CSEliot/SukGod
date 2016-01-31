@@ -8,6 +8,7 @@ using System.Collections;
 public class fireDeath : MonoBehaviour {
 
     public float onFireSpeed;
+    public float currentSpeed;
     public float aliveBurningTime;
     public bool isOnFire;
 	// Use this for initialization
@@ -26,10 +27,8 @@ public class fireDeath : MonoBehaviour {
             Debug.Log("burning");
             isOnFire = true;
             StartCoroutine("dieByFire");
-            //increase speed
+            currentSpeed = GetComponent<FirstPersonController>().moveSpeed;
             GetComponent<FirstPersonController>().moveSpeed = onFireSpeed;
-            //catch on fire <here>
-
         }
     }
 
@@ -37,20 +36,16 @@ public class fireDeath : MonoBehaviour {
     {
         yield return new WaitForSeconds(aliveBurningTime);
         //after burning for 10 seconds
-        if (GetComponent<ChantBehavior>().chantStatus())
-        {
-            GameStats.addPointsTeam(1, "blue");
-        }
         //character dies and stops moving after being burned
         GetComponent<movementModifier>().isCurrentlyDead = true;
         GetComponent<FirstPersonController>().enabled = false;
         GetComponent<Rigidbody>().Sleep();
         GetComponent<AnimationManager>().isDead(true);
-        
-        //needs to fall to the ground
+       
         yield return new WaitForSeconds(GameStats.TimeBeforeRespawn);
 
         //RESET TO BEGINNING with Inital variables
+        GetComponent<FirstPersonController>().moveSpeed = currentSpeed;
         GetComponent<movementModifier>().resetEverything();
     }
 

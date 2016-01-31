@@ -17,7 +17,6 @@ public class deathSpawnManager : MonoBehaviour
         wayPoints[1] = GameObject.Find("cliffSpawn_01").transform;
         wayPoints[2] = GameObject.Find("cliffSpawn_02").transform;
         wayPoints[3] = GameObject.Find("cliffSpawn_03").transform;
-
     }
      
         //Get random location around the spawn area near the cliff
