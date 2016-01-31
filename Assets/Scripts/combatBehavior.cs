@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/**
+ * @author Chris Ridgely
+ * @updated 7:27 Jan 30
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class combatBehavior : MonoBehaviour {
