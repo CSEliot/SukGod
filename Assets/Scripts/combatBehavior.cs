@@ -50,11 +50,11 @@ public class combatBehavior : MonoBehaviour {
 		
 	public void loseHealth(){
 		if (hitPoints > 0) {
+            GetComponent<AnimationManager>().isDead(true);
+            PhotonNetwork.Destroy (this.gameObject); //Changed in the future to incorporate death animation
 			hitPoints--;
 			Debug.Log (hitPoints);
 		} else {
-            GetComponent<AnimationManager>().isDead(true);
-            //Destroy (this.gameObject); //Changed in the future to incorporate death animation
 		}
 	}
 
