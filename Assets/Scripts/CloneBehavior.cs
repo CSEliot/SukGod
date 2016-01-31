@@ -10,7 +10,7 @@ public class CloneBehavior : MonoBehaviour {
 	private GameObject player;
 	private float chantDuration;
 	public GameObject clonePlayer;
-	public float speed = 2f;
+	public float speed = .1f;
 	public float recordDelay = 1f;
 	private int dynamicArraySize;
 
@@ -19,8 +19,8 @@ public class CloneBehavior : MonoBehaviour {
 		chantDuration = gameObject.GetComponent<ChantBehavior> ().chantDuration;
 		dynamicArraySize = (int)(chantDuration / recordDelay);
 		player = gameObject;
-		locationArray = new Vector3[dynamicArraySize + 1];
-		rotationArray = new Quaternion[dynamicArraySize + 1];
+		//locationArray = new Vector3[dynamicArraySize];
+		//rotationArray = new Quaternion[dynamicArraySize];
 	}
 	
 	// Update is called once per frame
@@ -29,16 +29,19 @@ public class CloneBehavior : MonoBehaviour {
 	}
 
 	public void recordLocation(){
+		locationArray = new Vector3[dynamicArraySize];
+		rotationArray = new Quaternion[dynamicArraySize];
+
 		StartCoroutine(recordLocationHelper ());
 	}
 
-	public void executeDeathCycle(Vector3[] locs, Quaternion[] rots){
+	public void executeDeathCycle(Vector3[] locs, Quaternion[] rots, int pointsRecorded){
 		Debug.Log ("Death Cycle:" + locs[0]);
 		gameObject.transform.position = locs[0];
 		gameObject.transform.rotation = rots [0];
 
-		StartCoroutine(moveFunction(locs));
-		StartCoroutine(rotateFunction(rots));
+		StartCoroutine(moveFunction(locs, rots, pointsRecorded));
+		//StartCoroutine(rotateFunction(rots));
 	}
 
 	public IEnumerator rotateFunction(Quaternion[] rotations){
@@ -51,7 +54,7 @@ public class CloneBehavior : MonoBehaviour {
 		while (i < rotations.Length) {
 			Debug.Log ("Lerping: " + i);
 			timeSinceStarted += Time.deltaTime;
-			gameObject.transform.rotation = Quaternion.Lerp (rotA, rotB, timeSinceStarted);
+			gameObject.transform.rotation = Quaternion.Lerp (rotA, rotB, timeSinceStarted * speed);
 			//If arrived, stop coroutine
 			if (gameObject.transform.rotation == rotB) {
 				rotA = gameObject.transform.rotation;
@@ -64,21 +67,37 @@ public class CloneBehavior : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator moveFunction(Vector3[] positions){
+	public IEnumerator moveFunction(Vector3[] positions, Quaternion[] rotations, int pointsRecorded){
 		int i = 0;
 
+		locationArray = new Vector3[pointsRecorded];
+		rotationArray = new Quaternion[pointsRecorded];
+
+		for(int index = 0; index<pointsRecorded; index++){
+			locationArray[index] = positions[index];
+			rotationArray[index] = rotations[index];
+		}
+
+
+		Debug.Log ("Move Function" + gameObject.name);
 		Vector3 a = gameObject.transform.position;
-		Vector3 b = positions[i];
+		Vector3 b = locationArray[i];
+		Quaternion rotA = gameObject.transform.rotation;
+		Quaternion rotB = rotationArray [i];
 
 		float timeSinceStarted = 0f;
-		while (i < positions.Length) {
+		while (i < pointsRecorded) {
 			Debug.Log ("Lerping: " + i);
 			timeSinceStarted += Time.deltaTime;
 			gameObject.transform.position = Vector3.Lerp (a, b, timeSinceStarted);
+			gameObject.transform.rotation = Quaternion.Lerp (rotA, rotB, timeSinceStarted);
 			//If arrived, stop coroutine
-			if (gameObject.transform.position == b) {
+			if (gameObject.transform.position == b && gameObject.transform.rotation == rotB) {
 				a = gameObject.transform.position;
-				b = positions[i++];
+				b = locationArray[i];
+				rotA = gameObject.transform.rotation;
+				Debug.Log ("Rotation Array: " + i);
+				rotB = rotationArray [i++];
 				timeSinceStarted = 0f;
 				//yield break;
 			}
@@ -102,7 +121,7 @@ public class CloneBehavior : MonoBehaviour {
 
 		Debug.Log ("Exited While Loop");
 		GameObject clone = (GameObject)Instantiate (clonePlayer, transform.position, transform.rotation);
-		clone.GetComponent<CloneBehavior> ().executeDeathCycle(locationArray, rotationArray);
+		clone.GetComponent<CloneBehavior> ().executeDeathCycle(locationArray, rotationArray, i);
 	}
 
 }
