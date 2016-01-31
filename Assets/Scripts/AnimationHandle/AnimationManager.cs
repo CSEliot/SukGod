@@ -10,6 +10,8 @@ public class AnimationManager : MonoBehaviour {
     public bool reset;
     public bool dead;
 
+    public int gruntcount;
+
 	// Use this for initialization
 	void Start () {
         reset = false;
@@ -25,9 +27,11 @@ public class AnimationManager : MonoBehaviour {
     {
         manager.SetBool("isJumping", value);
 
-        if(value == true)
+
+        if (value == true)
         {
             SoundBag.SendMessage("Grunt");
+  
         }
         
 

@@ -24,10 +24,10 @@ public class SoundBag : MonoBehaviour {
     void Grunt ()
     {
         int rando = Random.Range(0, Grunts.Length - 1);
-        if (Grunts[rando].isPlaying == false)
-        {
-            Grunts[rando].Play();
-        }
+       // if (Grunts[rando].isPlaying == false)
+      //  {
+           // Grunts[rando].Play();
+     //   }
        
 
 	}
