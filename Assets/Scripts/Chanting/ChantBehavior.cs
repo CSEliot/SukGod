@@ -24,29 +24,6 @@ public class ChantBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //Debug.Log("Chanting: " + isChanting);
-
-        //if chanting and if player has died
-        if (isChanting && GetComponent<movementModifier>().isCurrentlyDead)
-        {
-            GameStats.addPointsTeam(1, "blue");
-            GetComponent<movementModifier>().isCurrentlyDead = false;
-        }
-
-        //if player has chanted in the past then dies, player loses points
-        if (hasChanted && GetComponent<movementModifier>().isCurrentlyDead)
-        {
-            GameStats.addPointsTeam(-1, "blue");
-            GetComponent<movementModifier>().isCurrentlyDead = false;
-        }
-
-        //if player has chanted in the past then DOES NOT die, player loses points
-        if (hasChanted && !GetComponent<movementModifier>().isCurrentlyDead)
-        {
-            GameStats.addPointsTeam(-1, "blue");
-            hasChanted = false;
-        }
-
         //Debug.Log("BLUE POINTS: " + GameStats.blueTeamPoints);
         //if character is not jumping
         //if not current chanting and not currently in a fire
@@ -56,14 +33,61 @@ public class ChantBehavior : MonoBehaviour {
             Debug.Log("start chanting"); //Start Chanting
             StartCoroutine(startChanting ());
         }
+
+        //Debug.Log("Chanting: " + isChanting);
+
+        //if chanting and if player has died
+        //if (isChanting && GetComponent<movementModifier>().isCurrentlyDead)
+        //{
+        //    GameStats.addPointsTeam(1, "blue");
+        //    GetComponent<movementModifier>().isCurrentlyDead = false;
+        //}
+
+        ////if player has chanted in the past then dies, player loses points
+        //if (hasChanted && GetComponent<movementModifier>().isCurrentlyDead)
+        //{
+        //    GameStats.addPointsTeam(-1, "blue");
+        //    GetComponent<movementModifier>().isCurrentlyDead = false;
+        //}
+
+        //if player has chanted in the past then DOES NOT die, player loses points
+        if (hasChanted && !GetComponent<movementModifier>().isCurrentlyDead)
+        {
+            GameStats.addPointsTeam(-1, "blue");
+            hasChanted = false;
+        }
+
 	}
 
     public IEnumerator startChanting()
     {
         yield return new WaitForSeconds(chantDuration);
         Debug.Log("stop chanting"); //Stops Chanting
+        bool suicidedDuringChant = false;
+        if (GetComponent<movementModifier>().isCurrentlyDead)
+        {
+            suicidedDuringChant = true;
+        }
         isChanting = false;
-        hasChanted = true;
+        if(!suicidedDuringChant)
+            hasChanted = true;
+    }
+
+    public void CliffDeath()
+    {
+        Debug.Log("Cliff Death");
+        if (GetComponent<movementModifier>().isCurrentlyDead)
+        {
+            if (isChanting)
+            {
+                GameStats.addPointsTeam(1, "blue");
+            }
+            else
+            {
+                GameStats.addPointsTeam(-1, "blue");
+            }
+            isChanting = false;
+        }
     }
 
 	public bool chantStatus(){

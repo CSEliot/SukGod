@@ -34,6 +34,7 @@ public class cliffDeath : MonoBehaviour {
     {
         if (other.tag == "cliffEnd")
         {
+            Debug.Log("Entering clifend: " + other.name + gameObject.name);
             cliffEnd = true;
             StartCoroutine("cliffFallOffCheck");
             if (cliffStart)
@@ -41,6 +42,7 @@ public class cliffDeath : MonoBehaviour {
                 GetComponent <Rigidbody>().isKinematic = true;
                 GetComponent<FirstPersonController>().PauseCharacter();
                 GetComponent<movementModifier>().isCurrentlyDead = true;
+                GetComponent<ChantBehavior>().CliffDeath();
                 GetComponent<AnimationManager>().isDead(true);           
              }
         }
