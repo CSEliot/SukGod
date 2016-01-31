@@ -61,7 +61,7 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     public virtual void OnPhotonRandomJoinFailed()
     {
         Debug.Log("OnPhotonRandomJoinFailed() was called by PUN. No random room available, so we create one. Calling: PhotonNetwork.CreateRoom(null, new RoomOptions() {maxPlayers = 4}, null);");
-        PhotonNetwork.CreateRoom(null, new RoomOptions() { maxPlayers = 4 }, null);
+        PhotonNetwork.CreateRoom(null, new RoomOptions() { maxPlayers = 20 }, null);
     }
 
     // the following methods are implemented to give you some context. re-implement them as needed.
@@ -87,13 +87,26 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
 
     #region Photon
     
-    private void CreatePlayerObject()
+    public void CreatePlayerObject()
     {
-        Vector3 position = new Vector3(-2, 0, 0);
-        position.x += Random.Range(-3f, 3f);
-        position.z += Random.Range(-4f, 4f);
+        Vector3 myPosition;
+        string spawnSide = ""; 
+        if(MyMaster.GetTeam() == 0)
+        {
+            spawnSide = "SpawnsRed";
+        }else if (MyMaster.GetTeam() == 1)
+        {
+            spawnSide = "SpawnsBlue";
+        }
+        else
+        {
+            Debug.LogError("SPAWN SIDE TEAM NUM IS NOT 0 OR 1");
+        }
+        int totalSpawns = GameObject.FindGameObjectWithTag(spawnSide).transform.childCount;
+        int randomSpawnNum = Random.Range(0, totalSpawns - 1);
+        myPosition = GameObject.FindGameObjectWithTag(spawnSide).transform.GetChild(randomSpawnNum).transform.position;
 
-        GameObject newPlayerObject = PhotonNetwork.Instantiate("Robot Kyle Mecanim", position, Quaternion.identity, 0);
+        GameObject newPlayerObject = PhotonNetwork.Instantiate("Player-Net4", myPosition, Quaternion.identity, 0);
         m_AnimatorView = newPlayerObject.GetComponent<PhotonAnimatorView>();
     }
 
