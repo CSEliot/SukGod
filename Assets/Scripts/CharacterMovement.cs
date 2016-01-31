@@ -104,7 +104,6 @@ public class CharacterMovement : MonoBehaviour {
 
         transform.localEulerAngles = CamRotation;
 
-        
     }
 
     void Jump()
@@ -147,6 +146,6 @@ public class CharacterMovement : MonoBehaviour {
         
         CloneManager.GetComponent<SuicidalLooperPool>().AddClone(ChantStart, transform.position);
         ListAdded = false;
-    }
+    } 
 }
 
