@@ -36,7 +36,7 @@ public class FirstPersonController : MonoBehaviour {
     public float moveSpeed;    
     public float totalJumpsAllowed;
     public float totalJumpsMade;
-    private float floorInclineThreshold = 0.3f;
+    public float FloorInclineThreshold;
 
 
     public bool canCheckForJump;
@@ -169,18 +169,18 @@ public class FirstPersonController : MonoBehaviour {
 
         rayOrigin = new Ray(transform.position, transform.up*-1);
 
-        //if you are able to reach something, anything important or not
-        if (Physics.Raycast(rayOrigin, out hitInfo)) {
-            //if (Time.time % 2f > 1.8f) { Debug.Log("Below me is: " + hitInfo.normal.y); }
-            if (hitInfo.normal.y <= 0.4f)
-            {
-                canMove = false;
-            }
-            else
-            {
-                canMove = true;
-            }
-        }
+        ////if you are able to reach something, anything important or not
+        //if (Physics.Raycast(rayOrigin, out hitInfo)) {
+        //    //if (Time.time % 2f > 1.8f) { Debug.Log("Below me is: " + hitInfo.normal.y); }
+        //    if (hitInfo.normal.y <= 0.4f)
+        //    {
+        //        canMove = false;
+        //    }
+        //    else
+        //    {
+        //        canMove = true;
+        //    }
+        //}
 
         if (!paused) {		
             //player rotation
@@ -316,7 +316,7 @@ public class FirstPersonController : MonoBehaviour {
         if(isGrounded == false && canCheckForJump){
             for(int i = 0; i < floor.contacts.Length; i++){
                 tempVect = floor.contacts[i].normal;
-                if( tempVect.y > floorInclineThreshold){
+                if( tempVect.y > FloorInclineThreshold){
                     isGrounded = true;
                     totalJumpsMade = 0;
                     return;
