@@ -24,6 +24,7 @@ public class cliffDeath : MonoBehaviour {
         {
             cliffStart = true;
             StartCoroutine("cliffFallOffCheck");
+            cliffFallOffCheck();
         }
     }
 
@@ -35,9 +36,10 @@ public class cliffDeath : MonoBehaviour {
             StartCoroutine("cliffFallOffCheck");
             if (cliffStart)
             {
-                
-                //disable movement
-            }
+                GetComponent<FirstPersonController>().enabled = false;
+                GetComponent<movementModifier>().isCurrentlyDead = true;
+                GetComponent<AnimationManager>().isDead(true);           
+             }
         }
 
     }
@@ -45,18 +47,15 @@ public class cliffDeath : MonoBehaviour {
     //Check if character falls off the cliff
     IEnumerator cliffFallOffCheck()
     {
-        yield return new WaitForSeconds(2.0f);
-   
+        yield return new WaitForSeconds(GameStats.TimeBeforeRespawn);
         if (cliffStart && cliffEnd)
         {
             Debug.Log("cliff death");
-            //play death animation
-            //IF CHANTING POINTS COMPLETE
-              if(GetComponent<ChantBehavior>().chantStatus())
+            if (GetComponent<ChantBehavior>().chantStatus())
+            {
                 GameStats.addPointsTeam(1, "blue");
-            //Could also use getSpawnLoc()
-            Vector3 spawnLoc = GameObject.Find("BlueSpawnArea").GetComponent<deathSpawnManager>().getWayPointLoc();
-            transform.position = spawnLoc;
+            }
+            GetComponent<movementModifier>().resetEverything();
         }
         else
          cliffEnd = false;

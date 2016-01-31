@@ -327,6 +327,7 @@ public class FirstPersonController : MonoBehaviour {
 
     void OnTriggerExit(Collider colObj)
     {
+
     }
 
     IEnumerator DelayCarrying()

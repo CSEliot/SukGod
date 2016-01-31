@@ -32,7 +32,4 @@ public class deathSpawnManager : MonoBehaviour
         {
            return wayPoints[Random.Range(0, 3)].position;
         }
-
-
-       
     }
