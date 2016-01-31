@@ -6,6 +6,7 @@ using System.Collections;
 public class AnimationManager : MonoBehaviour {
 
     public Animator manager;
+    public GameObject SoundBag;
     public bool reset;
     public bool dead;
 
@@ -23,22 +24,40 @@ public class AnimationManager : MonoBehaviour {
     public void isJumping(bool value)
     {
         manager.SetBool("isJumping", value);
+
+        if(value == true)
+        {
+            SoundBag.SendMessage("Grunt");
+        }
+        
+
     }
 
     public void isDead(bool value)
     {
         dead = value;
         manager.SetBool("isDead", value);
+
+        if (value == true)
+        {
+            SoundBag.SendMessage("Win");
+            SoundBag.SendMessage("Dying");
+        }
+
     }
 
     public void isGrounded(bool value)
     {
         manager.SetBool("isGrounded", value);
+
+       
     }
 
     public void isAttacking(bool value)
     {
         manager.SetBool("isAttacking", value);
+
+        SoundBag.SendMessage("Grunt");
     }
 
     public void isReset(bool value)
