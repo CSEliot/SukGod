@@ -26,15 +26,21 @@ public class combatBehavior : MonoBehaviour {
 		hitbox.enabled = false;
         if (Input.GetButtonDown(attackKey) && canAttack && gameObject.tag == "Red Player" && m_p.isMine)
         {
-            hitbox.enabled = true;
-            GetComponent<AnimationManager>().isAttacking(true);
-            StartCoroutine(cooldown());
+            GetComponent<PhotonView>().RPC("AttackRPC", PhotonTargets.All);
         }
         else
         {
             GetComponent<AnimationManager>().isAttacking(false);
         }
 	}
+
+    [PunRPC]
+    void AttackRPC()
+    {
+        hitbox.enabled = true;
+        GetComponent<AnimationManager>().isAttacking(true);
+        StartCoroutine(cooldown());
+    }
 
 	void OnTriggerEnter(Collider other){
 		Debug.Log ("Combat Trigger Entered: " + other.name);
