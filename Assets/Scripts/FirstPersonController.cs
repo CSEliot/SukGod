@@ -138,6 +138,10 @@ public class FirstPersonController : MonoBehaviour {
 
     void Update ()
     {
+
+
+
+
         if (Input.GetKeyDown("p"))
         {
             Cursor.visible = true;
@@ -178,6 +182,18 @@ public class FirstPersonController : MonoBehaviour {
 
     void FixedUpdate () {
 
+
+        if ((Mathf.Abs(GetComponent<Rigidbody>().velocity.x) + Mathf.Abs(GetComponent<Rigidbody>().velocity.z)) > 2f)
+        {
+            GetComponent<AnimationManager>().isMoving(true);
+        }
+        else
+        {
+            GetComponent<AnimationManager>().isMoving(false);
+        }
+
+
+
         if (!m_PhotonView.isMine)
             return;
 
@@ -213,6 +229,9 @@ public class FirstPersonController : MonoBehaviour {
             if (totalJumpsMade < totalJumpsAllowed && Input.GetButtonDown (Jump_str)) {
                 totalJumpsMade += 1;
                 isGrounded = false;
+
+                GetComponent<AnimationManager>().isJumping(true);
+                GetComponent<AnimationManager>().isGrounded(false);
                 canCheckForJump = false;
 
                 GetComponent<Rigidbody>().velocity = new Vector3 (GetComponent<Rigidbody>().velocity.x, CalculateJumpVerticalSpeed (), GetComponent<Rigidbody>().velocity.z);
@@ -322,16 +341,21 @@ public class FirstPersonController : MonoBehaviour {
     {
         //Manager.say("CAN CJECK JUMP", "eliot");
         canCheckForJump = true;
+        GetComponent<AnimationManager>().isJumping(false);
     }
 
     void OnCollisionStay(Collision floor){
         Vector3 tempVect;
+
+        GetComponent<AnimationManager>().isGrounded(true);
+
         // we want to prevent isGrounded from being true and totalJumpsMade = 0 until 2 seconds later
-        if(isGrounded == false && canCheckForJump){
+        if (isGrounded == false && canCheckForJump){
             for(int i = 0; i < floor.contacts.Length; i++){
                 tempVect = floor.contacts[i].normal;
                 if( tempVect.y > FloorInclineThreshold){
-                    isGrounded = true;
+                 
+                    
                     totalJumpsMade = 0;
                     return;
                     //Manager.say("Collision normal is: " + tempVect);
@@ -382,6 +406,7 @@ public class FirstPersonController : MonoBehaviour {
     public bool GetIsDead()
     {
         return isDead;
+        GetComponent<AnimationManager>().isDead(true);
     }
 
     [PunRPC]
