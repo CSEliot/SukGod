@@ -30,7 +30,7 @@ public class combatBehavior : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log ("Trigger Entered");
+		Debug.Log ("Trigger Entered: " + other.name);
 		if(this.gameObject.tag == "Red Player" && other.gameObject.tag == "Blue Player")
 			other.SendMessageUpwards ("loseHealth");
 	}

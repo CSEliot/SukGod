@@ -90,13 +90,16 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
     public void CreatePlayerObject()
     {
         Vector3 myPosition;
+        string playerTag = "";
         string spawnSide = ""; 
         if(MyMaster.GetTeam() == 0)
         {
             spawnSide = "SpawnsRed";
+            playerTag = "Red Player";
         }else if (MyMaster.GetTeam() == 1)
         {
             spawnSide = "SpawnsBlue";
+            playerTag = "Blue Player";
         }
         else
         {
