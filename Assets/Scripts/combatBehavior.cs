@@ -23,10 +23,16 @@ public class combatBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		hitbox.enabled = false;
-		if (Input.GetButtonDown (attackKey) && canAttack) {
-			hitbox.enabled = true;
-			StartCoroutine(cooldown ());
-		}
+        if (Input.GetButtonDown(attackKey) && canAttack)
+        {
+            hitbox.enabled = true;
+            GetComponent<AnimationManager>().isAttacking(true);
+            StartCoroutine(cooldown());
+        }
+        else
+        {
+            GetComponent<AnimationManager>().isAttacking(false);
+        }
 	}
 
 	void OnTriggerEnter(Collider other){
@@ -40,7 +46,8 @@ public class combatBehavior : MonoBehaviour {
 			hitPoints--;
 			Debug.Log (hitPoints);
 		} else {
-			Destroy (this.gameObject); //Changed in the future to incorporate death animation
+            GetComponent<AnimationManager>().isDead(true);
+            //Destroy (this.gameObject); //Changed in the future to incorporate death animation
 		}
 	}
 

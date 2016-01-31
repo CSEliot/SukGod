@@ -109,7 +109,8 @@ public class ConnectAndJoinRandom : Photon.MonoBehaviour
         int randomSpawnNum = Random.Range(0, totalSpawns - 1);
         myPosition = GameObject.FindGameObjectWithTag(spawnSide).transform.GetChild(randomSpawnNum).transform.position;
 
-        GameObject newPlayerObject = PhotonNetwork.Instantiate("Player-Net4", myPosition, Quaternion.identity, 0);
+        //Choose between blue and red player here maybe?
+        GameObject newPlayerObject = PhotonNetwork.Instantiate("Player-Net44Blue", myPosition, Quaternion.identity, 0);
         m_AnimatorView = newPlayerObject.GetComponent<PhotonAnimatorView>();
     }
 

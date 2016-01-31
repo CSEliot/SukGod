@@ -17,28 +17,33 @@ public class AnimationManager : MonoBehaviour {
 	
     public void isMoving(bool value)
     {
-        //manager.SetBool("isMoving", value);
+        manager.SetBool("isMoving", value);
+    }
+
+    public void isJumping(bool value)
+    {
+        manager.SetBool("isJumping", value);
     }
 
     public void isDead(bool value)
     {
         dead = value;
-      //  manager.SetBool("isDead", value);
+        manager.SetBool("isDead", value);
     }
 
     public void isGrounded(bool value)
     {
-       // manager.SetBool("isGrounded", value);
+        manager.SetBool("isGrounded", value);
     }
 
     public void isAttacking(bool value)
     {
-       // manager.SetBool("isAttacking", value);
+        manager.SetBool("isAttacking", value);
     }
 
     public void isReset(bool value)
     {
         reset = value;
-      //  manager.SetBool("isReset", value);
+        manager.SetBool("isReset", value);  
     }
 }
