@@ -125,6 +125,10 @@ public class FirstPersonController : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
             transform.GetChild(0).gameObject.SetActive(true);
         }
+        else
+        {
+            GetComponentInChildren<AudioListener>().enabled = false;
+        }
         Debug.Log("View ID: " + m_PhotonView.viewID);
         if(((m_PhotonView.viewID - 1001) / 1000)%5 == 0)
         {

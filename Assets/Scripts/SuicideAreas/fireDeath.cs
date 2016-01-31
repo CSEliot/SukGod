@@ -16,7 +16,7 @@ public class fireDeath : MonoBehaviour {
     void Start()
     {
         isOnFire = false;
-        onFireSpeed = 50.0f;
+        onFireSpeed = 6.0f;
         aliveBurningTime = 5.0f;
     }
 
