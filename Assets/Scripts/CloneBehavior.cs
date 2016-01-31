@@ -60,20 +60,22 @@ public class CloneBehavior : MonoBehaviour {
 			rotationArray[index] = rotations[index];
 		}
 
-
+		// Set the to's and from's
 		Debug.Log ("Move Function" + gameObject.name);
 		Vector3 a = gameObject.transform.position;
 		Vector3 b = locationArray[i];
 		Quaternion rotA = gameObject.transform.rotation;
 		Quaternion rotB = rotationArray [i];
 
+		// Lerp to the next point in the array. Rotation and Position
 		float timeSinceStarted = 0f;
 		while (i < pointsRecorded) {
 			Debug.Log ("Lerping: " + i);
 			timeSinceStarted += Time.deltaTime;
 			gameObject.transform.position = Vector3.Lerp (a, b, timeSinceStarted);
 			gameObject.transform.rotation = Quaternion.Lerp (rotA, rotB, timeSinceStarted);
-			//If arrived, stop coroutine
+
+			//If arrived, move to next point in the array
 			if (gameObject.transform.position == b && gameObject.transform.rotation == rotB) {
 				a = gameObject.transform.position;
 				b = locationArray[i];
@@ -81,13 +83,12 @@ public class CloneBehavior : MonoBehaviour {
 				Debug.Log ("Rotation Array: " + i);
 				rotB = rotationArray [i++];
 				timeSinceStarted = 0f;
-				//yield break;
 			}
 			yield return null;
 			Debug.Log ("Return Null");
 		}
 	}
-
+		
 	public IEnumerator recordLocationHelper(){
 		Debug.Log("Entered Record Location Helper");
 		int i = 0;
