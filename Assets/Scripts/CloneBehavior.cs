@@ -29,6 +29,8 @@ public class CloneBehavior : MonoBehaviour {
 	}
 
 	public void recordLocation(){
+		// Dynamic Array size determines maximum size depending on 
+		// chant length per waypoint delay
 		locationArray = new Vector3[dynamicArraySize];
 		rotationArray = new Quaternion[dynamicArraySize];
 
@@ -44,35 +46,15 @@ public class CloneBehavior : MonoBehaviour {
 		//StartCoroutine(rotateFunction(rots));
 	}
 
-	public IEnumerator rotateFunction(Quaternion[] rotations){
-		int i = 0;
-
-		Quaternion rotA = gameObject.transform.rotation;
-		Quaternion rotB = rotations [i];
-
-		float timeSinceStarted = 0f;
-		while (i < rotations.Length) {
-			Debug.Log ("Lerping: " + i);
-			timeSinceStarted += Time.deltaTime;
-			gameObject.transform.rotation = Quaternion.Lerp (rotA, rotB, timeSinceStarted * speed);
-			//If arrived, stop coroutine
-			if (gameObject.transform.rotation == rotB) {
-				rotA = gameObject.transform.rotation;
-				rotB = rotations [i++];
-				timeSinceStarted = 0f;
-				//yield break;
-			}
-			yield return null;
-			Debug.Log ("Return Null");
-		}
-	}
-
+	// This function is only to be called in the clone
 	public IEnumerator moveFunction(Vector3[] positions, Quaternion[] rotations, int pointsRecorded){
 		int i = 0;
 
+		//The clone will instantiate array equal to points recorded
 		locationArray = new Vector3[pointsRecorded];
 		rotationArray = new Quaternion[pointsRecorded];
 
+		//Deep copy of array arguments
 		for(int index = 0; index<pointsRecorded; index++){
 			locationArray[index] = positions[index];
 			rotationArray[index] = rotations[index];
