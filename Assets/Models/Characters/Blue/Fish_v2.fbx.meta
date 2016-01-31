@@ -1,0 +1,2005 @@
+fileFormatVersion: 2
+guid: fd5c7e57dc455a049a612e5f377b0bb5
+timeCreated: 1454259533
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ankle.L
+    100002: Ankle.R
+    100004: Ball.L
+    100006: Ball.R
+    100008: Bicep.L
+    100010: Bicep.R
+    100012: Calf.L
+    100014: Calf.R
+    100016: Center
+    100018: Chest
+    100020: Cloth1
+    100022: Cloth2
+    100024: Cloth3
+    100026: Cloth3_end
+    100028: Cube
+    100030: Cube.001
+    100032: Cube.002
+    100034: Cube.003
+    100036: Cube.004
+    100038: Cube.005
+    100040: Cube.006
+    100042: Cube.007
+    100044: Cube.008
+    100046: Cube.009
+    100048: Cube.011
+    100050: Cube.012
+    100052: Cube.013
+    100054: Cube.014
+    100056: Cube.015
+    100058: Cube.016
+    100060: Cube.017
+    100062: Elbow.L
+    100064: Elbow.L_end
+    100066: Elbow.R
+    100068: Elbow.R_end
+    100070: Feather.L
+    100072: Feather.L_end
+    100074: //RootNode
+    100076: FootControl.L
+    100078: FootControl.L_end
+    100080: FootControl.R
+    100082: FootControl.R_end
+    100084: Forearm.L
+    100086: Forearm.R
+    100088: Groin.L
+    100090: Groin.R
+    100092: HandControl.L
+    100094: HandControl.L_end
+    100096: HandControl.R
+    100098: HandControl.R_end
+    100100: Head
+    100102: Head_end
+    100104: Heel.L
+    100106: Heel.R
+    100108: Knee.L
+    100110: Knee.L_end
+    100112: Knee.R
+    100114: Knee.R_end
+    100116: Mid
+    100118: Neck
+    100120: Pelvis
+    100122: Pelvis_end
+    100124: Person_Bones
+    100126: Root
+    100128: Root.010.L
+    100130: Root.010.R
+    100132: Root.012.L
+    100134: Root.012.R
+    100136: Root.013.L
+    100138: Root.013.L_end
+    100140: Root.013.R
+    100142: Root.013.R_end
+    100144: Root.014.L
+    100146: Root.014.L_end
+    100148: Root.014.R
+    100150: Root.014.R_end
+    100152: Root.015.L
+    100154: Root.015.R
+    100156: Root.016.L
+    100158: Root.016.L_end
+    100160: Root.016.R
+    100162: Root.016.R_end
+    100164: Root.017.L
+    100166: Root.017.L_end
+    100168: Root.017.R
+    100170: Root.017.R_end
+    100172: Root.018.L
+    100174: Root.018.L_end
+    100176: Root.018.R
+    100178: Root.018.R_end
+    100180: Root.019.L
+    100182: Root.019.L_end
+    100184: Root.019.R
+    100186: Root.019.R_end
+    100188: Root.020.L
+    100190: Root.020.L_end
+    100192: Root.020.R
+    100194: Root.020.R_end
+    100196: Shoulder.L
+    100198: Shoulder.R
+    100200: Thigh.L
+    100202: Thigh.R
+    100204: Toe.L
+    100206: Toe.L_end
+    100208: Toe.R
+    100210: Toe.R_end
+    400000: Ankle.L
+    400002: Ankle.R
+    400004: Ball.L
+    400006: Ball.R
+    400008: Bicep.L
+    400010: Bicep.R
+    400012: Calf.L
+    400014: Calf.R
+    400016: Center
+    400018: Chest
+    400020: Cloth1
+    400022: Cloth2
+    400024: Cloth3
+    400026: Cloth3_end
+    400028: Cube
+    400030: Cube.001
+    400032: Cube.002
+    400034: Cube.003
+    400036: Cube.004
+    400038: Cube.005
+    400040: Cube.006
+    400042: Cube.007
+    400044: Cube.008
+    400046: Cube.009
+    400048: Cube.011
+    400050: Cube.012
+    400052: Cube.013
+    400054: Cube.014
+    400056: Cube.015
+    400058: Cube.016
+    400060: Cube.017
+    400062: Elbow.L
+    400064: Elbow.L_end
+    400066: Elbow.R
+    400068: Elbow.R_end
+    400070: Feather.L
+    400072: Feather.L_end
+    400074: //RootNode
+    400076: FootControl.L
+    400078: FootControl.L_end
+    400080: FootControl.R
+    400082: FootControl.R_end
+    400084: Forearm.L
+    400086: Forearm.R
+    400088: Groin.L
+    400090: Groin.R
+    400092: HandControl.L
+    400094: HandControl.L_end
+    400096: HandControl.R
+    400098: HandControl.R_end
+    400100: Head
+    400102: Head_end
+    400104: Heel.L
+    400106: Heel.R
+    400108: Knee.L
+    400110: Knee.L_end
+    400112: Knee.R
+    400114: Knee.R_end
+    400116: Mid
+    400118: Neck
+    400120: Pelvis
+    400122: Pelvis_end
+    400124: Person_Bones
+    400126: Root
+    400128: Root.010.L
+    400130: Root.010.R
+    400132: Root.012.L
+    400134: Root.012.R
+    400136: Root.013.L
+    400138: Root.013.L_end
+    400140: Root.013.R
+    400142: Root.013.R_end
+    400144: Root.014.L
+    400146: Root.014.L_end
+    400148: Root.014.R
+    400150: Root.014.R_end
+    400152: Root.015.L
+    400154: Root.015.R
+    400156: Root.016.L
+    400158: Root.016.L_end
+    400160: Root.016.R
+    400162: Root.016.R_end
+    400164: Root.017.L
+    400166: Root.017.L_end
+    400168: Root.017.R
+    400170: Root.017.R_end
+    400172: Root.018.L
+    400174: Root.018.L_end
+    400176: Root.018.R
+    400178: Root.018.R_end
+    400180: Root.019.L
+    400182: Root.019.L_end
+    400184: Root.019.R
+    400186: Root.019.R_end
+    400188: Root.020.L
+    400190: Root.020.L_end
+    400192: Root.020.R
+    400194: Root.020.R_end
+    400196: Shoulder.L
+    400198: Shoulder.R
+    400200: Thigh.L
+    400202: Thigh.R
+    400204: Toe.L
+    400206: Toe.L_end
+    400208: Toe.R
+    400210: Toe.R_end
+    4300000: Cube.017
+    4300002: Cube.016
+    4300004: Cube.014
+    4300006: Cube.013
+    4300008: Cube.011
+    4300010: Cube.003
+    4300012: Cube
+    4300014: Cube.015
+    4300016: Cube.009
+    4300018: Cube.008
+    4300020: Cube.007
+    4300022: Cube.006
+    4300024: Cube.005
+    4300026: Cube.004
+    4300028: Cube.002
+    4300030: Cube.001
+    4300032: Cube.012
+    7400000: Person_Bones|Person_Dead
+    7400002: Person_Bones|Person_Falling
+    7400004: Person_Bones|Person_Jump
+    7400006: Person_Bones|Person_Kill
+    7400008: Person_Bones|Person_Land
+    7400010: Person_Bones|Person_Run
+    7400012: Person_Bones|Person_Standing
+    9500000: //RootNode
+    13700000: Cube
+    13700002: Cube.001
+    13700004: Cube.002
+    13700006: Cube.003
+    13700008: Cube.004
+    13700010: Cube.005
+    13700012: Cube.006
+    13700014: Cube.007
+    13700016: Cube.008
+    13700018: Cube.009
+    13700020: Cube.011
+    13700022: Cube.012
+    13700024: Cube.013
+    13700026: Cube.014
+    13700028: Cube.015
+    13700030: Cube.016
+    13700032: Cube.017
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Person_Bones|Person_Dead
+      takeName: Person_Bones|Person_Dead
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Person_Bones|Person_Falling
+      takeName: Person_Bones|Person_Falling
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Person_Bones|Person_Jump
+      takeName: Person_Bones|Person_Jump
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Person_Bones|Person_Kill
+      takeName: Person_Bones|Person_Kill
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Person_Bones|Person_Land
+      takeName: Person_Bones|Person_Land
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Person_Bones|Person_Run
+      takeName: Person_Bones|Person_Run
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Person_Bones|Person_Standing
+      takeName: Person_Bones|Person_Standing
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.001
+        weight: 1
+      - path: Cube.002
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      - path: Cube.004
+        weight: 1
+      - path: Cube.005
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      - path: Cube.007
+        weight: 1
+      - path: Cube.008
+        weight: 1
+      - path: Cube.009
+        weight: 1
+      - path: Cube.011
+        weight: 1
+      - path: Cube.012
+        weight: 1
+      - path: Cube.013
+        weight: 1
+      - path: Cube.014
+        weight: 1
+      - path: Cube.015
+        weight: 1
+      - path: Cube.016
+        weight: 1
+      - path: Cube.017
+        weight: 1
+      - path: Person_Bones
+        weight: 1
+      - path: Person_Bones/Root
+        weight: 1
+      - path: Person_Bones/Root/Center
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3
+        weight: 1
+      - path: Person_Bones/Root/Center/Cloth1/Cloth2/Cloth3/Cloth3_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.L/Thigh.L/Calf.L/Ankle.L/Heel.L/Ball.L/Toe.L/Toe.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Groin.R/Thigh.R/Calf.R/Ankle.R/Heel.R/Ball.R/Toe.R/Toe.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Feather.L/Feather.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Neck/Head/Head_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.013.L/Root.013.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.014.L/Root.014.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.015.L/Root.016.L/Root.016.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.017.L/Root.017.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.018.L/Root.018.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.019.L/Root.019.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.L/Bicep.L/Forearm.L/Root.010.L/Root.012.L/Root.020.L/Root.020.L_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.013.R/Root.013.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.014.R/Root.014.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.015.R/Root.016.R/Root.016.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.017.R/Root.017.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.018.R/Root.018.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.019.R/Root.019.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R
+        weight: 1
+      - path: Person_Bones/Root/Center/Mid/Chest/Shoulder.R/Bicep.R/Forearm.R/Root.010.R/Root.012.R/Root.020.R/Root.020.R_end
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis
+        weight: 1
+      - path: Person_Bones/Root/Center/Pelvis/Pelvis_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L
+        weight: 1
+      - path: Person_Bones/Root/Elbow.L/Elbow.L_end
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R
+        weight: 1
+      - path: Person_Bones/Root/Elbow.R/Elbow.R_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L
+        weight: 1
+      - path: Person_Bones/Root/FootControl.L/FootControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R
+        weight: 1
+      - path: Person_Bones/Root/FootControl.R/FootControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L
+        weight: 1
+      - path: Person_Bones/Root/HandControl.L/HandControl.L_end
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R
+        weight: 1
+      - path: Person_Bones/Root/HandControl.R/HandControl.R_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.L
+        weight: 1
+      - path: Person_Bones/Root/Knee.L/Knee.L_end
+        weight: 1
+      - path: Person_Bones/Root/Knee.R
+        weight: 1
+      - path: Person_Bones/Root/Knee.R/Knee.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
