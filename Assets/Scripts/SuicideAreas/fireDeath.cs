@@ -16,8 +16,8 @@ public class fireDeath : MonoBehaviour {
     void Start()
     {
         isOnFire = false;
-        onFireSpeed = 50.0f;
-        aliveBurningTime = 10.0f;
+        onFireSpeed = 6.0f;
+        aliveBurningTime = 5.0f;
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,14 +34,15 @@ public class fireDeath : MonoBehaviour {
 
     IEnumerator dieByFire()
     {
+        GetComponent<ChantBehavior>().FireDeath(aliveBurningTime);
         yield return new WaitForSeconds(aliveBurningTime);
         //after burning for 10 seconds
         //character dies and stops moving after being burned
         GetComponent<movementModifier>().isCurrentlyDead = true;
-        GetComponent<FirstPersonController>().enabled = false;
-        GetComponent<Rigidbody>().Sleep();
+        GetComponent<FirstPersonController>().PauseCharacter();
+        GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<AnimationManager>().isDead(true);
-       
+
         yield return new WaitForSeconds(GameStats.TimeBeforeRespawn);
 
         //RESET TO BEGINNING with Inital variables
