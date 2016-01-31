@@ -7,16 +7,11 @@ using System.Collections;
 public class deathSpawnManager : MonoBehaviour
 {
 
-    public GameObject blueAI;
+    //public GameObject blueAI;
     public Transform[] wayPoints;
 
     void Start()
     {
-        wayPoints = new Transform[4];
-        wayPoints[0] = GameObject.Find("cliffSpawn_00").transform;
-        wayPoints[1] = GameObject.Find("cliffSpawn_01").transform;
-        wayPoints[2] = GameObject.Find("cliffSpawn_02").transform;
-        wayPoints[3] = GameObject.Find("cliffSpawn_03").transform;
     }
      
         //Get random location around the spawn area near the cliff
@@ -29,6 +24,6 @@ public class deathSpawnManager : MonoBehaviour
         //Get random location using waypoints objects
         public Vector3 getWayPointLoc()
         {
-           return wayPoints[Random.Range(0, 3)].position;
+           return wayPoints[Random.Range(0, wayPoints.Length-1)].position;
         }
     }

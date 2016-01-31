@@ -7,24 +7,25 @@ public class movementModifier : MonoBehaviour {
 
     public GameObject player;
     public float chantDuration;
+    private ChantBehavior myChantLogic;
 
     //Assuming characters can only chant once
     public bool isCurrentlyDead;
 
     void Start()
     {
+        myChantLogic = GetComponent<ChantBehavior>();
         isCurrentlyDead = false;
       //  haveChanted = false;
         chantDuration = 2.0f;
-        player = GameObject.Find("BluePlayer4");
     }
 
     //Halt movement during chanting
 	void Update ()
     {
-        if (player.GetComponent<ChantBehavior>().chantStatus() /*&& !haveChanted*/ && !isCurrentlyDead)
+        if (myChantLogic.chantStatus() /*&& !haveChanted*/ && !isCurrentlyDead)
         {
-            StartCoroutine("stopMoving", chantDuration);
+            //StartCoroutine("stopMoving", chantDuration);
         }
 	}
 
@@ -43,12 +44,12 @@ public class movementModifier : MonoBehaviour {
     {
         Vector3 pos = GameObject.Find("BlueSpawnArea").GetComponent<deathSpawnManager>().getWayPointLoc();
         transform.position = pos;
-        GetComponent<FirstPersonController>().enabled = true;
+        GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<fireDeath>().isOnFire = false;
         isCurrentlyDead = false;
         GetComponent<AnimationManager>().isDead(false);
         GetComponent<AnimationManager>().isReset(true);
-        GetComponent<ChantBehavior>().hasChanted = false;
+        GetComponent<ChantBehavior>().SetHasChanted(false);
         StartCoroutine("waitToClearReset");
     }
 

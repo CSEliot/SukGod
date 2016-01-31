@@ -30,7 +30,7 @@ public class combatBehavior : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log ("Trigger Entered: " + other.name);
+		Debug.Log ("Combat Trigger Entered: " + other.name);
 		if(this.gameObject.tag == "Red Player" && other.gameObject.tag == "Blue Player")
 			other.SendMessageUpwards ("loseHealth");
 	}
@@ -41,7 +41,6 @@ public class combatBehavior : MonoBehaviour {
 			Debug.Log (hitPoints);
 		} else {
 			Destroy (this.gameObject); //Changed in the future to incorporate death animation
-	
 		}
 	}
 
@@ -50,6 +49,5 @@ public class combatBehavior : MonoBehaviour {
 		yield return new WaitForSeconds (attackCooldown);
 		canAttack = true;
 		Debug.Log ("Cooldown Ended");
-
 	}
 }

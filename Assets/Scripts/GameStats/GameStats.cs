@@ -18,5 +18,7 @@ public static class GameStats
             redTeamPoints = redTeamPoints + value;
         else if (teamColor == "blue")
             blueTeamPoints = blueTeamPoints + value;
+        Debug.Log("Red team points: " + redTeamPoints);
+        Debug.Log("Blue team points: " + blueTeamPoints);
     }
 }

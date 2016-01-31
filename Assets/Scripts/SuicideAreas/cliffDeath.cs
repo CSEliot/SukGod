@@ -9,8 +9,9 @@ using System.Collections;
 
 public class cliffDeath : MonoBehaviour {
 
-    public bool cliffStart;
-    public bool cliffEnd;
+    private bool cliffStart;
+    private bool cliffEnd;
+
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class cliffDeath : MonoBehaviour {
     
 	void OnTriggerExit(Collider other)
     {
+
         if (other.tag == "cliffStart")
         {
             cliffStart = true;
@@ -36,8 +38,8 @@ public class cliffDeath : MonoBehaviour {
             StartCoroutine("cliffFallOffCheck");
             if (cliffStart)
             {
-                GetComponent<FirstPersonController>().enabled = false;
-                GetComponent <FirstPersonController>().PauseCharacter();
+                GetComponent <Rigidbody>().isKinematic = true;
+                GetComponent<FirstPersonController>().PauseCharacter();
                 GetComponent<movementModifier>().isCurrentlyDead = true;
                 GetComponent<AnimationManager>().isDead(true);           
              }
